@@ -4,13 +4,13 @@
 export default function (kibana) {
   return new kibana.Plugin({
     require: ['elasticsearch'],
-
+    name: '<%= this.kebabCase(name) %>',
     uiExports: {
       <% if (generateApp) { %>
       app: {
-        title: '<%= title %>',
+        title: '<%= this.startCase(name) %>',
         description: '<%= description %>',
-        main: 'plugins/<%= name %>/app'
+        main: 'plugins/<%= this.kebabCase(name) %>/app'
       },
       <% } %>
       <% if (generateTranslations) { %>

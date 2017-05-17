@@ -17,6 +17,8 @@
     "kibana",
     "plugin"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
   "devDependencies": {}
 }

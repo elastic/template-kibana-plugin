@@ -22,8 +22,8 @@ uiRoutes
 
 uiModules
 .get('app/<%= name %>', [])
-.controller('<%= camelCaseName %>HelloWorld', function ($scope, $route, $interval) {
-  $scope.title = '<%= title %>';
+.controller('<%= this.camelCase(name) %>HelloWorld', function ($scope, $route, $interval) {
+  $scope.title = '<%= this.startCase(name) %>';
   $scope.description = '<%= description %>';
 
   const currentTime = moment($route.current.locals.currentTime);
