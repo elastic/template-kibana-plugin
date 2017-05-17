@@ -1,6 +1,9 @@
 # template-kibana-plugin
 
-This project is an sao template for bootstrapping a Kibana Plugin. It creates a basic hello world Kibana plugin with all the elements in place so you can easily get started with creating your first Kibana plugin.
+[![Apache License](https://img.shields.io/badge/license-Apache-red.svg)](https://raw.githubusercontent.com/elastic/template-kibana-plugin/master/LICENSE)
+[![Build Status](https://travis-ci.org/elastic/template-kibana-plugin.svg?branch=master)](https://travis-ci.org/elastic/template-kibana-plugin)
+
+This project is an [sao.js](https://sao.js.org) template for bootstrapping a Kibana Plugin. It creates a basic hello world Kibana plugin with all the elements in place so you can easily get started with creating your first Kibana plugin.
 
 ## Getting Started
 
