@@ -38,7 +38,7 @@ This project is an [sao.js](https://sao.js.org) template for bootstrapping a Kib
 
   ```sh
   cd my-new-plugin
-  sao elastic/kibana-plugin-template
+  sao elastic/template-kibana-plugin
   ```
 
 1. Get the URL for your Elasticsearch installation (most commonly `http://localhost:9200`)
