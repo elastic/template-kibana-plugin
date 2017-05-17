@@ -11,6 +11,8 @@
   },
   "license": "Apache-2.0",
   "scripts": {
+    "test": "ava sao.test.js",
+    "test:dev": "ava --watch sao.test.js "
   },
   "keywords": [
     "sao-template",
@@ -20,5 +22,8 @@
   "dependencies": {
     "lodash": "^4.17.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "sao": "^0.19.3"
+  }
 }
