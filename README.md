@@ -1,6 +1,6 @@
-# Kibana Plugin Yeoman Generator
+# template-kibana-plugin
 
-This project is a Yeoman generator for bootstrapping a Kibana Plugin. It creates a basic hello world Kibana plugin with all the elements in place so you can easily get started with creating your first Kibana plugin.
+This project is an sao template for bootstrapping a Kibana Plugin. It creates a basic hello world Kibana plugin with all the elements in place so you can easily get started with creating your first Kibana plugin.
 
 ## Getting Started
 
@@ -25,17 +25,17 @@ This project is a Yeoman generator for bootstrapping a Kibana Plugin. It creates
   
   **HINT:** If you install [`nvm`](https://github.com/creationix/nvm#install-script) and [`avn`](https://github.com/wbyoung/avn) then you can create your own `.node-version` file and `avn` will switch to it _automatically_!
 
-1. Install Yeoman and the Kibana plugin generator
+1. Install sao globally
 
   ```sh
-  npm install -g yo generator-kibana-plugin
+  npm install -g sao
   ```
 
 1. Run the generator inside your plugin directory
 
   ```sh
   cd my-new-plugin
-  yo kibana-plugin
+  sao elastic/kibana-plugin-template
   ```
 
 1. Get the URL for your Elasticsearch installation (most commonly `http://localhost:9200`)
@@ -51,14 +51,6 @@ This project is a Yeoman generator for bootstrapping a Kibana Plugin. It creates
   ```
 
 1. Visit [http://localhost:5601](http://localhost:5601)
-
-## Options
-
-Run the generator with the `--help` flag for up-to-date option docs.
-
-```sh
-yo kibana-plugin --help
-```
 
 ## Development Tasks
 
