@@ -11,6 +11,7 @@
   },
   "license": "Apache-2.0",
   "scripts": {
+    "lint": "eslint *.js template/**/*.js",
     "test": "ava sao.test.js",
     "test:dev": "ava --watch sao.test.js "
   },
