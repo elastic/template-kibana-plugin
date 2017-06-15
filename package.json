@@ -23,7 +23,14 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
+    "@elastic/eslint-config-kibana": "^0.6.1",
     "ava": "^0.19.1",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "eslint-plugin-react": "^7.0.1",
     "sao": "^0.19.3"
   }
 }

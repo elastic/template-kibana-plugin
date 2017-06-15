@@ -1,0 +1,6 @@
+---
+extends: "@elastic/kibana"
+
+rules:
+  mocha/handle-done-callback: 0
+  mocha/no-exclusive-tests: 0
