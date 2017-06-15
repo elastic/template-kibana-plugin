@@ -136,7 +136,7 @@ test('includes server api when answering yes', (t) => {
   });
 });
 
-test('plugin config has correct name', (t) => {
+test('plugin config has correct name and main path', (t) => {
   t.plan(2);
 
   return sao.mockPrompt(template, {
@@ -147,12 +147,60 @@ test('plugin config has correct name', (t) => {
     generateApi: true,
   })
   .then((res) => {
-    const contents = getFileContents(res.files['index.js']);
-    const nameLine = contents.match('name: (.*)')[1];
-    const mainLine = contents.match('main: (.*)')[1];
+    const indexContents = getFileContents(res.files['index.js']);
+    const nameLine = indexContents.match('name: (.*)')[1];
+    const mainLine = indexContents.match('main: (.*)')[1];
 
     t.not(nameLine.indexOf('some-fancy-plugin'), -1);
     t.not(mainLine.indexOf('plugins/some-fancy-plugin/app'), -1);
+  });
+});
+
+test('plugin package has correct name', (t) => {
+  t.plan(1);
+
+  return sao.mockPrompt(template, {
+    name: 'Some fancy plugin',
+    generateApp: true,
+    generateTranslations: true,
+    generateHack: true,
+    generateApi: true,
+  })
+  .then((res) => {
+    const packageContents = getFileContents(res.files['package.json']);
+    const pkg = JSON.parse(packageContents);
+
+    t.is(pkg.name, 'some-fancy-plugin');
+  });
+});
+
+test('package has version "kibana" with master', (t) => {
+  t.plan(1);
+
+  return sao.mockPrompt(template, {
+    name: 'Some fancy plugin',
+    kbnVersion: 'master',
+  })
+  .then((res) => {
+    const packageContents = getFileContents(res.files['package.json']);
+    const pkg = JSON.parse(packageContents);
+
+    t.is(pkg.kibana.version, 'kibana');
+  });
+});
+
+test('package has correct version', (t) => {
+  t.plan(1);
+
+  return sao.mockPrompt(template, {
+    name: 'Some fancy plugin',
+    kbnVersion: 'v6.0.0',
+  })
+  .then((res) => {
+    const packageContents = getFileContents(res.files['package.json']);
+    const pkg = JSON.parse(packageContents);
+
+    t.is(pkg.kibana.version, 'v6.0.0');
   });
 });
 
