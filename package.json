@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@elastic/eslint-config-kibana": "^0.6.1",
+    "@elastic/eslint-import-resolver-kibana": "^0.8.1",
     "ava": "^0.19.1",
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",

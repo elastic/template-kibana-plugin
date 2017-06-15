@@ -4,6 +4,7 @@ extends: "@elastic/kibana"
 plugins:
   - ava
 
-rules:
-  mocha/handle-done-callback: 0
-  mocha/no-exclusive-tests: 0
+settings:
+  import/resolver:
+    "@elastic/eslint-import-resolver-kibana":
+      rootPackageName: template-kibana-plugin

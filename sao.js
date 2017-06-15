@@ -53,7 +53,7 @@ module.exports = {
   },
   installDependencies: true,
   gitInit: true,
-  post({log, chalk, isNewFolder, folderName}) {
+  post({ log }) {
     log.success('Your plugin has been created, use `npm start` to run it');
   },
 };

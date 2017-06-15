@@ -1,3 +1,4 @@
+/* eslint mocha/handle-done-callback: 0 */
 const { resolve } = require('path');
 const test = require('ava');
 const sao = require('sao');
