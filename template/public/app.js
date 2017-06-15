@@ -1,5 +1,4 @@
 import moment from 'moment';
-import chrome from 'ui/chrome';
 import { uiModules } from 'ui/modules';
 import uiRoutes from 'ui/routes';
 
