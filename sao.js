@@ -11,7 +11,7 @@ module.exports = {
   prompts: {
     name: {
       message: 'Name of your plugin?',
-      role: 'folder:name',
+      default: ':folderName:',
     },
     description: {
       message: 'Provide a short description',
