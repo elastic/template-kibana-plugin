@@ -1,3 +1,10 @@
+# 7.1.0
+
+- Add Kibana eslint config and resolver
+- Fix deprecated setting in sao config
+- Bump dependency versions
+- Replace chai with expect.js to better track Kibana modules
+
 # 7.0.1
 
 - Fix version in `package.json` when using `master` as your version
