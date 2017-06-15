@@ -1,6 +1,6 @@
 {
   "name": "template-kibana-plugin",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "An sao template for a Kibana plugins",
   "repository": {
     "type": "git",
