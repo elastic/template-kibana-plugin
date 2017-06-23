@@ -13,7 +13,8 @@
     "test:server": "plugin-helpers test:server",
     "test:browser": "plugin-helpers test:browser",
     "build": "plugin-helpers build",
-    "postinstall": "plugin-helpers postinstall"
+    "postinstall": "plugin-helpers postinstall",
+    "gather-info": "node gather-info.js"
   },
   "devDependencies": {
     "@elastic/eslint-config-kibana": "^0.6.1",
