@@ -1,3 +1,9 @@
+# 7.1.1
+
+- Add `kibana.templateVersion` to output `package.json`
+- Add `gather-info` script to generated output
+- Add compat info to the readme
+
 # 7.1.0
 
 - Add Kibana eslint config and resolver
