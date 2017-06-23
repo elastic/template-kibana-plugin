@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import expect from 'expect.js';
 
 describe('suite', () => {
   it('is a test test', () => {
