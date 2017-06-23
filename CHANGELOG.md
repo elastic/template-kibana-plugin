@@ -14,7 +14,12 @@
 - Requires Kibana v5.5.0 or higher
 - Fixed use of `ui/modules` in the template
 
+# 6.2.2
+
+- Replace chai with expect.js to better track Kibana modules
+- Add compat info to the readme
+
 # 6.2.1
 
 - Forked from https://github.com/elastic/generator-kibana-plugin
-- Should target Kibana ^5.0.0, up to 5.4
+- Should target Kibana ^5.0.0, up to 5.4.x
