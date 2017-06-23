@@ -1,4 +1,5 @@
 const _ = require('lodash');
+const pkg = require('./package.json');
 
 module.exports = {
   templateOptions: {
@@ -6,6 +7,7 @@ module.exports = {
       kebabCase: _.kebabCase,
       startCase: _.startCase,
       camelCase: _.camelCase,
+      templateVersion: pkg.version,
     }
   },
   prompts: {

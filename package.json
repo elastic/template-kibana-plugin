@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "eslint *.js template/**/*.js",
     "test": "ava sao.test.js",
-    "test:dev": "ava --watch sao.test.js "
+    "test:dev": "ava --watch sao.test.js"
   },
   "keywords": [
     "sao-template",

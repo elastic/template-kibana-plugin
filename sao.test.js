@@ -2,6 +2,7 @@
 const { resolve } = require('path');
 const test = require('ava');
 const sao = require('sao');
+const templatePkg = require('./package.json');
 
 const template = {
   fromPath: resolve('.'),
@@ -202,6 +203,21 @@ test('package has correct version', (t) => {
     const pkg = JSON.parse(packageContents);
 
     t.is(pkg.kibana.version, 'v6.0.0');
+  });
+});
+
+test('package has correct templateVersion', (t) => {
+  t.plan(1);
+
+  return sao.mockPrompt(template, {
+    name: 'Some fancy plugin',
+    kbnVersion: 'master',
+  })
+  .then((res) => {
+    const packageContents = getFileContents(res.files['package.json']);
+    const pkg = JSON.parse(packageContents);
+
+    t.is(pkg.kibana.templateVersion, templatePkg.version);
   });
 });
 
