@@ -9,6 +9,7 @@ This project is an [sao.js](https://sao.js.org) template for bootstrapping a Kib
 
 Generator Version | Min Kibana Version | Max Kibana Version
 ----------------- | ------------------ | ------------------
+^7.0.1 | 5.5.0 | master
 ^6.2.2 | 5.0.0 | 5.4.x
 
 ## Getting Started
