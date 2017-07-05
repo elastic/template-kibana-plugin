@@ -52,7 +52,7 @@ npm install -g sao template-kibana-plugin@^6.2.2
 
 ```sh
 cd my-new-plugin
-sao template-kibana-plugin
+sao kibana-plugin
 ```
 
 ### [Optional] Get the URL for your Elasticsearch installation
