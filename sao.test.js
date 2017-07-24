@@ -17,7 +17,7 @@ function getConfig(file) {
 }
 
 test('skips files when answering no', (t) => {
-  t.plan(8);
+  t.plan(10);
 
   return sao.mockPrompt(template, {
     generateApp: false,
@@ -28,9 +28,11 @@ test('skips files when answering no', (t) => {
   .then((res) => {
     // check output files
     t.is(res.fileList.includes('public/app.js'), false, 'no sample app');
+    t.is(res.fileList.includes('public/__tests__/index.js'), false, 'sample app');
     t.is(res.fileList.includes('translations/es.json'), false, 'no translations');
     t.is(res.fileList.includes('public/hack.js'), false, 'no sample hack');
     t.is(res.fileList.includes('server/routes/example.js'), false, 'no sample server');
+    t.is(res.fileList.includes('server/__tests__/index.js'), false, 'no sample server test');
 
     const uiExports = getConfig(res.files['index.js']);
     t.is(uiExports.indexOf('app:'), -1);
@@ -41,7 +43,7 @@ test('skips files when answering no', (t) => {
 });
 
 test('includes app when answering yes', (t) => {
-  t.plan(8);
+  t.plan(10);
 
   return sao.mockPrompt(template, {
     generateApp: true,
@@ -52,9 +54,11 @@ test('includes app when answering yes', (t) => {
   .then((res) => {
     // check output files
     t.is(res.fileList.includes('public/app.js'), true, 'sample app');
+    t.is(res.fileList.includes('public/__tests__/index.js'), true, 'sample app test');
     t.is(res.fileList.includes('translations/es.json'), false, 'no translations');
     t.is(res.fileList.includes('public/hack.js'), false, 'no sample hack');
     t.is(res.fileList.includes('server/routes/example.js'), false, 'no sample server');
+    t.is(res.fileList.includes('server/__tests__/index.js'), false, 'no sample server test');
 
     const uiExports = getConfig(res.files['index.js']);
     t.not(uiExports.indexOf('app:'), -1);
@@ -65,7 +69,7 @@ test('includes app when answering yes', (t) => {
 });
 
 test('includes translations when answering yes', (t) => {
-  t.plan(8);
+  t.plan(10);
 
   return sao.mockPrompt(template, {
     generateApp: true,
@@ -76,9 +80,11 @@ test('includes translations when answering yes', (t) => {
   .then((res) => {
     // check output files
     t.is(res.fileList.includes('public/app.js'), true, 'sample app');
+    t.is(res.fileList.includes('public/__tests__/index.js'), true, 'sample app test');
     t.is(res.fileList.includes('translations/es.json'), true, 'translations');
     t.is(res.fileList.includes('public/hack.js'), false, 'no sample hack');
     t.is(res.fileList.includes('server/routes/example.js'), false, 'no sample server');
+    t.is(res.fileList.includes('server/__tests__/index.js'), false, 'no sample server test');
 
     const uiExports = getConfig(res.files['index.js']);
     t.not(uiExports.indexOf('app:'), -1);
@@ -89,7 +95,7 @@ test('includes translations when answering yes', (t) => {
 });
 
 test('includes hack when answering yes', (t) => {
-  t.plan(8);
+  t.plan(10);
 
   return sao.mockPrompt(template, {
     generateApp: true,
@@ -100,9 +106,11 @@ test('includes hack when answering yes', (t) => {
   .then((res) => {
     // check output files
     t.is(res.fileList.includes('public/app.js'), true, 'sample app');
+    t.is(res.fileList.includes('public/__tests__/index.js'), true, 'sample app test');
     t.is(res.fileList.includes('translations/es.json'), true, 'translations');
     t.is(res.fileList.includes('public/hack.js'), true, 'no sample hack');
     t.is(res.fileList.includes('server/routes/example.js'), false, 'no sample server');
+    t.is(res.fileList.includes('server/__tests__/index.js'), false, 'no sample server test');
 
     const uiExports = getConfig(res.files['index.js']);
     t.not(uiExports.indexOf('app:'), -1);
@@ -113,7 +121,7 @@ test('includes hack when answering yes', (t) => {
 });
 
 test('includes server api when answering yes', (t) => {
-  t.plan(8);
+  t.plan(10);
 
   return sao.mockPrompt(template, {
     generateApp: true,
@@ -125,8 +133,10 @@ test('includes server api when answering yes', (t) => {
     // check output files
     t.is(res.fileList.includes('public/app.js'), true, 'sample app');
     t.is(res.fileList.includes('translations/es.json'), true, 'translations');
+    t.is(res.fileList.includes('public/__tests__/index.js'), true, 'sample app test');
     t.is(res.fileList.includes('public/hack.js'), true, 'no sample hack');
     t.is(res.fileList.includes('server/routes/example.js'), true, 'no sample server');
+    t.is(res.fileList.includes('server/__tests__/index.js'), true, 'no sample server test');
 
     const uiExports = getConfig(res.files['index.js']);
     t.not(uiExports.indexOf('app:'), -1);
