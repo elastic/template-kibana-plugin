@@ -1,4 +1,12 @@
-# 7.1.1
+# 7.2.2
+
+- Fix some typos in the readme, prompts, and resulting files
+
+# 7.2.1
+
+- Ship with working tests by default
+
+# 7.2.0
 
 - Add `kibana.templateVersion` to output `package.json`
 - Add `gather-info` script to generated output
