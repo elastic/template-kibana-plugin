@@ -33,7 +33,7 @@ export default function (kibana) {
 
     <% if (generateApi) { %>
     init(server, options) {
-      // Add server routes and initalize the plugin here
+      // Add server routes and initialize the plugin here
       exampleRoute(server);
     }
     <% } %>

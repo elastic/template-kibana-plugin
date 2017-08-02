@@ -57,7 +57,7 @@ sao kibana-plugin
 
 ### [Optional] Get the URL for your Elasticsearch installation
 
-Elasticsearch is avaialable at `http://localhost:9200`, unless you explicitly changed it in the Elasticsearch config.
+Elasticsearch is available at `http://localhost:9200`, unless you explicitly changed it in the Elasticsearch config.
 
 ### Start Kibana in development mode with your new plugin included
 
