@@ -20,7 +20,7 @@ module.exports = {
       default: 'An awesome Kibana plugin',
     },
     kbnVersion: {
-      message: 'What Kibana version are you targetting?',
+      message: 'What Kibana version are you targeting?',
       default: 'master',
     },
     generateApp: {
@@ -30,7 +30,7 @@ module.exports = {
     },
     generateTranslations: {
       type: 'confirm',
-      message: 'Should transation files be generated?',
+      message: 'Should translation files be generated?',
       default: true,
     },
     generateHack: {
