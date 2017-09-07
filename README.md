@@ -36,16 +36,9 @@ ls ~/wherever/you/store/your/code
   my-new-plugin # <- your plugin directory
 ```
 
-### Install sao and the template globally
-
+### Install SAO
 ```sh
-npm install -g sao template-kibana-plugin
-```
-
-**HINT:** If you need to use a version other than the latest, you can specify it when you install the template:
-
-```sh
-npm install -g sao template-kibana-plugin@^6.2.2
+npm install -g sao
 ```
 
 ### Run the generator
@@ -53,6 +46,13 @@ npm install -g sao template-kibana-plugin@^6.2.2
 ```sh
 cd my-new-plugin
 sao kibana-plugin
+```
+
+**HINT:** If you need to use a version other than the latest, you can specify it when you run the template:
+
+```sh
+# SAO will install template-kibana-plugin@6.2.2
+sao kibana-plugin@6.2.2
 ```
 
 ### [Optional] Get the URL for your Elasticsearch installation
