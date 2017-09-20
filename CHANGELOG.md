@@ -1,3 +1,8 @@
+# 7.2.3
+
+- Chore: upgrade `kibana-plugin-helpers`, which will allow plugins to handle [changes to the kibana babel build script](https://github.com/elastic/kibana/pull/13973)
+- Fix: update readme to remove the step of installing the template globally, since sao will pull it off npm automatically
+
 # 7.2.2
 
 - Fix some typos in the readme, prompts, and resulting files
