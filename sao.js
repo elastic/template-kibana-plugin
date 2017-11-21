@@ -52,6 +52,7 @@ module.exports = {
   },
   move: {
     'gitignore': '.gitignore',
+    'eslintrc': '.eslintrc',
   },
   installDependencies: true,
   gitInit: true,
