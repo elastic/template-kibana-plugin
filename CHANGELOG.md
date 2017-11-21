@@ -1,3 +1,9 @@
+# 7.2.4
+
+- Bump  `kibana-plugin-helpers`, to work with some recent changes in Kibana
+- Bump kibana eslint config and associated peer dependencies
+- Adds eslint to the template
+
 # 7.2.3
 
 - Chore: upgrade `kibana-plugin-helpers`, which will allow plugins to handle [changes to the kibana babel build script](https://github.com/elastic/kibana/pull/13973)
