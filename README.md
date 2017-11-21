@@ -9,7 +9,8 @@ This project is an [sao.js](https://sao.js.org) template for bootstrapping a Kib
 
 Generator Version | Min Kibana Version | Max Kibana Version
 ----------------- | ------------------ | ------------------
-^7.0.1 | 5.5.0 | master
+^8.0.0 | 7.0.0 | master
+^7.0.1 | 5.5.0 | 6.x
 ^6.2.2 | 5.0.0 | 5.4.x
 
 ## Getting Started
@@ -51,8 +52,8 @@ sao kibana-plugin
 **HINT:** If you need to use a version other than the latest, you can specify it when you run the template:
 
 ```sh
-# SAO will install template-kibana-plugin@6.2.2
-sao kibana-plugin@6.2.2
+# SAO will install template-kibana-plugin@7.2.4
+sao kibana-plugin@7.2.4
 ```
 
 ### [Optional] Get the URL for your Elasticsearch installation
