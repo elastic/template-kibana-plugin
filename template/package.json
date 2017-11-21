@@ -8,7 +8,7 @@
     "templateVersion": "<%= this.templateVersion %>"
   },
   "scripts": {
-    "lint": "eslint",
+    "lint": "eslint **/*.js",
     "start": "plugin-helpers start",
     "test:server": "plugin-helpers test:server",
     "test:browser": "plugin-helpers test:browser",
