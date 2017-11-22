@@ -250,3 +250,13 @@ test('sample app has correct values', (t) => {
       t.not(titleLine.indexOf('Some Fancy Plugin'), -1);
     });
 });
+
+test('includes dotfiles', (t) => {
+  t.plan(2);
+
+  return sao.mockPrompt(template)
+    .then((res) => {
+      t.truthy(res.files['.gitignore']);
+      t.truthy(res.files['.eslintrc']);
+    });
+});
