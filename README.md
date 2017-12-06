@@ -27,15 +27,17 @@ node --version
 
 **HINT:** If you install [`nvm`](https://github.com/creationix/nvm#install-script) and [`avn`](https://github.com/wbyoung/avn) then you can create your own `.node-version` file and `avn` will switch to it _automatically_!
 
-### Create a directory for your plugin that is right next to your Kibana directory.
+### Create a directory for your plugin within the `kibana-extra` folder
 
-The Kibana directory must be named `kibana`, and your plugin directory must be a sibling directory
+The Kibana directory must be named `kibana`, and your plugin directory must live within the sibling `kibana-extra` folder:
 
 ```sh
 ls ~/wherever/you/store/your/code
-  kibana # <- where you store the Kibana development environment
-  my-new-plugin # <- your plugin directory
+ ├── kibana # <- where you have checked out Kibana
+ └── kibana-extra/my-new-plugin # <- your plugin directory
 ```
+
+All Kibana plugins must be located in the `kibana-extra` folder during development.
 
 ### Install SAO
 ```sh
@@ -45,7 +47,7 @@ npm install -g sao
 ### Run the generator
 
 ```sh
-cd my-new-plugin
+cd kibana-extra/my-new-plugin
 sao kibana-plugin
 ```
 
