@@ -1,3 +1,5 @@
+> **NOTE:** Kibana now includes [its own plugin generator](https://github.com/elastic/kibana/tree/master/packages/kbn-plugin-generator). You should use this to generate your plugin if you are targeting Kibana 6.3 or greater.
+
 # template-kibana-plugin
 
 [![Apache License](https://img.shields.io/badge/license-apache_2.0-a9215a.svg)](https://raw.githubusercontent.com/elastic/template-kibana-plugin/master/LICENSE)
@@ -9,8 +11,8 @@ This project is an [sao.js](https://sao.js.org) template for bootstrapping a Kib
 
 Generator Version | Min Kibana Version | Max Kibana Version
 ----------------- | ------------------ | ------------------
-^8.0.0 | 7.0.0 | master
-^7.0.1 | 5.5.0 | 6.x
+[bundled plugin generator](https://github.com/elastic/kibana/tree/master/packages/kbn-plugin-generator)  | 6.3 | master
+^7.0.1 | 5.5.0 | 6.2
 ^6.2.2 | 5.0.0 | 5.4.x
 
 ## Getting Started
